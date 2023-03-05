@@ -3,34 +3,34 @@
   <head>
     <title>ACCA File Store Name Generator</title>
     <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
 
-h1 {
-  font-size: 2.5em;
-  text-align: center;
-  color: #dc3545;
-}
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+        color: #dc3545;
+      }
 
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.1em;
-}
-button {
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+      }
+      button {
         background-color: #dc3545;
         border: none;
         color: white;
@@ -43,32 +43,40 @@ button {
         cursor: pointer;
       }
 
-input[type="text"],
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 1.1em;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
+      input[type="text"],
+      button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
 
-button[type="submit"] {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+      button[type="submit"] {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
 
-button[type="submit"]:hover {
-  background-color: #c82333;
-}
-h4 {
-    font-size: 1.5em;
-  text-align: center;
-  color: #dc3545;
-}
+      button[type="submit"]:hover {
+        background-color: #c82333;
+      }
+      h4 {
+        font-size: 1.5em;
+        text-align: center;
+        color: #dc3545;
+      }
+      iframe {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 500px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
     </style>
   </head>
   <body>
@@ -76,52 +84,92 @@ h4 {
     <h4>Made by Kapil Pidhwani</h4>
     <form>
       <label for="accaId">ACCA ID:</label>
-      <input type="text" id="accaId" name="accaId" required maxlength="7" oninput="generateFileName()"><br><br>
-      
+      <input
+        type="text"
+        id="accaId"
+        name="accaId"
+        required
+        maxlength="7"
+        oninput="generateFileName()"
+      /><br /><br />
+
       <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" oninput="generateFileName()"><br><br>
-      
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        oninput="generateFileName()"
+      /><br /><br />
+
       <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" oninput="generateFileName()"><br><br>
-      
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        oninput="generateFileName()"
+      /><br /><br />
+
       <label for="dob">Date of Birth (dd/mm/yyyy):</label>
-      <input type="text" id="dob" name="dob" oninput="generateFileName()"><br><br>
-      
+      <input
+        type="text"
+        id="dob"
+        name="dob"
+        oninput="generateFileName()"
+      /><br /><br />
+
       <label for="docName">Document Name:</label>
-      <input type="text" id="docName" name="docName" oninput="generateFileName()"><br><br>
-      
+      <input
+        type="text"
+        id="docName"
+        name="docName"
+        oninput="generateFileName()"
+      /><br /><br />
+
       <label for="fileName">Generated File Name:</label>
-      <input type="text" id="fileName" name="fileName" readonly><br><br>
-      <button type="button" onclick="copyFileName()">Copy</button><br><br>
-      
+      <input type="text" id="fileName" name="fileName" readonly /><br /><br />
+      <button type="button" onclick="copyFileName()">Copy</button><br /><br />
+
       <button type="submit">Clear</button>
     </form>
-    
+    <iframe
+      src="https://scribehow.com/embed/How_to_Generate_a_File_System_Name_for_ACCA_Document__bxmc0iopRTS1XcLcsy8d0w"
+      width="640"
+      height="640"
+      allowfullscreen
+      frameborder="0"
+    ></iframe>
     <script>
-        function generateFileName() {
-          const accaId = document.getElementById("accaId").value.replace(/\D/g, '');
-          const firstName = document.getElementById("firstName").value;
-          const lastName = document.getElementById("lastName").value;
-          const dob = document.getElementById("dob").value.replace(/\D/g, '');
-          const docName = document.getElementById("docName").value.replace(/\b\w/g, (word) => word.toUpperCase()).replace(/\s/g, '');
-          
-          const currentDate = new Date().toLocaleDateString("en-GB", {
+      function generateFileName() {
+        const accaId = document
+          .getElementById("accaId")
+          .value.replace(/\D/g, "");
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const dob = document.getElementById("dob").value.replace(/\D/g, "");
+        const docName = document
+          .getElementById("docName")
+          .value.replace(/\b\w/g, (word) => word.toUpperCase())
+          .replace(/\s/g, "");
+
+        const currentDate = new Date()
+          .toLocaleDateString("en-GB", {
             day: "2-digit",
             month: "2-digit",
-            year: "numeric"
-          }).replace(/\//g, '');
-          
-          const fileName = `${accaId}-${firstName}${lastName}-${dob}-${docName}-${currentDate}`;
-          
-          document.getElementById("fileName").value = fileName;
-        }
-        
-        function copyFileName() {
-          const fileName = document.getElementById("fileName");
-          fileName.select();
-          document.execCommand("copy");
-          alert("File name copied to clipboard!");
-        }
-      </script>
+            year: "numeric",
+          })
+          .replace(/\//g, "");
+
+        const fileName = `${accaId}-${firstName}${lastName}-${dob}-${docName}-${currentDate}`;
+
+        document.getElementById("fileName").value = fileName;
+      }
+
+      function copyFileName() {
+        const fileName = document.getElementById("fileName");
+        fileName.select();
+        document.execCommand("copy");
+        alert("File name copied to clipboard!");
+      }
+    </script>
   </body>
 </html>
