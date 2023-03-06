@@ -143,8 +143,10 @@
         const accaId = document
           .getElementById("accaId")
           .value.replace(/\D/g, "");
-        const firstName = document.getElementById("firstName").value;
-        const lastName = document.getElementById("lastName").value;
+        const firstName = document.getElementById("firstName").value.replace(/\b\w/g, (word) => word.toUpperCase())
+          .replace(/\s/g, "");
+        const lastName = document.getElementById("lastName").value.replace(/\b\w/g, (word) => word.toUpperCase())
+          .replace(/\s/g, "");
         const dob = document.getElementById("dob").value.replace(/\D/g, "");
         const docName = document
           .getElementById("docName")
